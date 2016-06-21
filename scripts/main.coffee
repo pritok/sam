@@ -2,7 +2,10 @@ module.exports = (robot) ->
   robot.respond /^ping$/i, (res) ->
     res.send 'pong'
 
+  msg = null
   robot.listen(
-    (message) -> true
-    (response) -> response.reply "Hey there!"
+    (message) ->
+      msg = message
+      true
+    (response) -> response.reply msg
   )
