@@ -1,3 +1,3 @@
 module.exports = (robot) ->
-  robot.hear /ping/, (res) ->
+  robot.respond /^ping$/, (res) ->
     res.send 'pong'
