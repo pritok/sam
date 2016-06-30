@@ -1,0 +1,4 @@
+*.private filter=fixperms
+
+secrets/* filter=git-crypt diff=git-crypt
+secrets/credentials/* filter=git-crypt diff=git-crypt
